@@ -1,4 +1,4 @@
 
-const Example = require('./Example');
+const Profile = require('./Profile');
 
-module.exports = {Example};
+module.exports = {Profile};
