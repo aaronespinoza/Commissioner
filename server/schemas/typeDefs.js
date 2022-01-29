@@ -21,13 +21,14 @@ const typeDefs = gql`
   }
 
   type Query {
+    me: User
     examples: [Example]
     user: User
   }
 
   type Mutation {
     addExample(exampleText: String!): Example
-    addUser(firstName: String!, lastName: String!, email: String!, favoriteTeam: String!): Auth
+    addUser(firstName: String!, lastName: String!, email: String!, favoriteTeam: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
   }
 `;
