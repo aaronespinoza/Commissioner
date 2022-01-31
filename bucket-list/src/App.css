@@ -23,14 +23,13 @@ body {
   padding-bottom: 32px;
 }
 
-<<<<<<< HEAD
-.testing{
-  margin-top: 500px;
-  
+.test{
+  margin-top: 150px;
+  height: 500px;
+  opacity: 75%;
+  box-shadow: 5px 10px 10px rgb(181, 179, 179);
 }
 
-=======
->>>>>>> 1b7aa66e538f254dec111796b40360d73ab70e3c
 h1 {
   margin: 32px 0;
   color: #fff;
