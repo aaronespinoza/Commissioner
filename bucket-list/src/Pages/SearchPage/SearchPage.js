@@ -5,10 +5,12 @@ import MyTeamCard from "../../components/MyTeamCard";
 import WinsCard from "../../components/WinsCard";
 import Percentage from "../../components/Percentage";
 import Roster from "../../components/Roster";
+import SearchBar from "../../components/SearchBar";
 import {
     Row,
     Col,
    } from "react-bootstrap" 
+
 
 function SearchPage() {
   return (
@@ -27,6 +29,7 @@ function SearchPage() {
             <Percentage />
           </Col>
           <Col sm={4}>
+              <SearchBar/>
             <Roster/>
           </Col>
         </Row>
