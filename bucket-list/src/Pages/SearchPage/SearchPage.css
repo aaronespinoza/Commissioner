@@ -1,10 +1,40 @@
-.myTeam{
-width: 70%;
-opacity: 75%;
-height: 200px;
-margin-left: 2px;
-box-shadow: 5px 10px 10px rgb(148, 146, 146);
-text-align: center;
-font-size: 80px;
-margin-top: 15%;
+.myTeam {
+  width: 70%;
+  opacity: 75%;
+  height: 200px;
+  margin-left: 2px;
+  box-shadow: 5px 10px 10px rgb(148, 146, 146);
+  text-align: center;
+  font-size: 80px;
+  margin: 20px;
+}
+
+.WinsCard {
+  width: 70%;
+  opacity: 75%;
+  height: 200px;
+  margin-left: 2px;
+  box-shadow: 5px 10px 10px rgb(148, 146, 146);
+  text-align: center;
+  font-size: 60px;
+  margin: 20px;
+}
+
+.Percentage {
+  width: 70%;
+  opacity: 75%;
+  height: 200px;
+  margin-left: 2px;
+  box-shadow: 5px 10px 10px rgb(148, 146, 146);
+  text-align: center;
+  font-size: 60px;
+  margin: 20px;
+}
+
+.Roster {
+  opacity: 75%;
+  height: 738px;
+  box-shadow: 5px 10px 10px rgb(148, 146, 146);
+  text-align: center;
+  font-size: 60px;
 }
