@@ -1,10 +1,10 @@
 import React from "react";
 import "./SearchPage.css";
-import img from "../../images/searchCourt.jpg";
-import MyTeamCard from "../../components/MyTeamCard";
-import WinsCard from "../../components/WinsCard";
-import Percentage from "../../components/Percentage";
-import Roster from "../../components/Roster";
+import img from "../images/searchCourt.jpg";
+import MyTeamCard from "../components/MyTeamCard";
+import WinsCard from "../components/WinsCard";
+import Percentage from "../components/Percentage";
+import Roster from "../components/Roster";
 import {
     Row,
     Col,
