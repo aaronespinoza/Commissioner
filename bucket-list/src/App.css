@@ -30,6 +30,25 @@ body {
   box-shadow: 5px 10px 10px rgb(181, 179, 179);
 }
 
+.loginBtn{
+  background-color: inherit;
+}
+
+.mainBg{
+  background-image: url(./images/signIn.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+
+}
+
+.SearchBg{
+  background-image: url(./images/searchCourt.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
 h1 {
   margin: 32px 0;
   color: #fff;

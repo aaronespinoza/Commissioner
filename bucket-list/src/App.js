@@ -1,38 +1,40 @@
 import './App.css';
+import React,{useState} from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {Card, 
-  Navbar, 
-  Container, 
-  Nav,
-  Row,
-  Col} from "react-bootstrap"
+import Login from './components/Login'
+import SignUp from './components/SignUp'
+import Nav from './components/Nav'
+import SearchPage from './Pages/SearchPage/SearchPage';
 
-
-// import img1 from './images/teamSelect.jpg'
 
 function App() {
+  const [show, setShow] = useState(false);
+  const [showLogin, setShowLogin] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleCloseLogin = () => setShowLogin(false);
+  const handleShow = () => setShow(true);
+  const handleShowLogin = () => setShowLogin(true);
   return (
-    <div>
+    <SearchPage/>
+//   <>
 
-  <Navbar bg="dark" variant="dark">
-    <Container>
-    <Nav className="me-auto">
-      <Nav.Link href="#home">Login</Nav.Link>
-      <Nav.Link href="#features">Sign Up</Nav.Link>
-    </Nav>
-    </Container>
-  </Navbar>
+// <div className="mainBg">
+
+//   <div className="SearchBg">
 
 
-<Row className="justify-content-md-center">
-      <Col md={6}>
-    <Card styles={{height:'300px!important'}} className="test">
-  <Card.Body >This is some text within a card body.</Card.Body>
-</Card>
-</Col>
-</Row>
-    </div>
+//  <Nav handleShow={handleShow} handleShowLogin={handleShowLogin}></Nav>
+
+//      <Login showLogin={showLogin} handleCloseLogin={handleCloseLogin}></Login>
+//      <SignUp show={show} handleClose={handleClose}></SignUp>
+ 
+//     </div>
+
+//     </div>
+// </>
   );
+
 }
 
 
