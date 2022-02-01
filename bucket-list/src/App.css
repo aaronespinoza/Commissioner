@@ -42,6 +42,13 @@ body {
 
 }
 
+.SearchBg{
+  background-image: url(./images/searchCourt.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
 h1 {
   margin: 32px 0;
   color: #fff;

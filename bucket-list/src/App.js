@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Login from './components/Login'
 import SignUp from './components/SignUp'
 import Nav from './components/Nav'
+import SearchPage from './Pages/SearchPage/SearchPage';
 
 
 function App() {
@@ -15,22 +16,23 @@ function App() {
   const handleShow = () => setShow(true);
   const handleShowLogin = () => setShowLogin(true);
   return (
-  <>
+    <SearchPage/>
+//   <>
 
-<div className="mainBg">
+// <div className="mainBg">
 
-  <div className="SearchBg">
+//   <div className="SearchBg">
 
 
- <Nav handleShow={handleShow} handleShowLogin={handleShowLogin}></Nav>
+//  <Nav handleShow={handleShow} handleShowLogin={handleShowLogin}></Nav>
 
-     <Login showLogin={showLogin} handleCloseLogin={handleCloseLogin}></Login>
-     <SignUp show={show} handleClose={handleClose}></SignUp>
+//      <Login showLogin={showLogin} handleCloseLogin={handleCloseLogin}></Login>
+//      <SignUp show={show} handleClose={handleClose}></SignUp>
  
-    </div>
+//     </div>
 
-    </div>
-</>
+//     </div>
+// </>
   );
 
 }
