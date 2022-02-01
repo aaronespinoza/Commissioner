@@ -1,13 +1,42 @@
 import { gql } from '@apollo/client';
 
 
-export const ADD_EXAMPLE = gql`
-  mutation addExample($exampleText: String!) {
-    addExample(exampleText: $exampleText) {
+export const ADD_USER = gql`
+  mutation addUser($firstName: String!, $lastName: String!, $email: String!, $favoriteTeam: String!, $password: String!) {
+    addUser(firstName: $firstName, lastName: $lastName, email: $email, favoriteTeam: $favoriteTeam, password: $password) {
+      token
+      user {
+        _id
+        favoriteTeam
+      }
+    }
+  }
+`; // mutation addUser creates user with variables, token user _id functionality?
+
+export const LOGIN = gql`
+  mutation login($email: String!, $password: String!) {
+    login(email: $email, password: $password) {
+      token
+      user {
+        _id
+      }
+    }
+  }
+`
+
+export const REMOVE_USER = gql`
+  mutation removeUser($userId: ID!) {
+    removeUser(userId: $userId) {
       _id
-      exampleText
     }
   }
 `;
 
-
+export const UPDATE_TEAM = gql`
+  mutation updateTeam($userId: ID!,$favoriteTeam: String! ) {
+    updateTeam(userId: $userID, favoriteTeam: $favoriteTeam) {
+      _id
+      favoriteTeam
+    }
+  }
+`;

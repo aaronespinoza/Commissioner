@@ -17,6 +17,19 @@
     "concurrently": "^5.1.0"
   },
   "dependencies": {
+<<<<<<< HEAD
+<<<<<<< HEAD
     "axios": "^0.25.0"
+=======
+=======
+>>>>>>> 1b7aa66e538f254dec111796b40360d73ab70e3c
+    "apollo-server-express": "^3.6.2",
+    "bootstrap": "^5.1.3",
+    "express": "^4.17.2",
+    "react": "^17.0.2"
+<<<<<<< HEAD
+>>>>>>> bf5406a (starting front end)
+=======
+>>>>>>> 1b7aa66e538f254dec111796b40360d73ab70e3c
   }
 }
