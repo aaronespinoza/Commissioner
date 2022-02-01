@@ -5,12 +5,12 @@ import {
     Row,
    } from "react-bootstrap" 
 
-function MyTeamCard () {
+function Percentage () {
 return(
     <Container>
         <Row lg={4}>
-    <Card className="myTeam">
-    <Card.Body >MY TEAM</Card.Body>
+    <Card className="Percentage">
+    <Card.Body >Win % | Win Streak</Card.Body>
     </Card>
     </Row>
     </Container>
@@ -20,4 +20,4 @@ return(
 }
 
 
-export default MyTeamCard; 
+export default Percentage; 

@@ -5,12 +5,12 @@ import {
     Row,
    } from "react-bootstrap" 
 
-function MyTeamCard () {
+function WinsCard () {
 return(
     <Container>
         <Row lg={4}>
-    <Card className="myTeam">
-    <Card.Body >MY TEAM</Card.Body>
+    <Card className="WinsCard">
+    <Card.Body >Team Wins | Team Losses</Card.Body>
     </Card>
     </Row>
     </Container>
@@ -20,4 +20,4 @@ return(
 }
 
 
-export default MyTeamCard; 
+export default WinsCard; 
