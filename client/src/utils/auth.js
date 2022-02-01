@@ -1,7 +1,11 @@
-import decode from 'jwt-decode';
+const jwt = require('jsonwebtoken');
 
-class AuthService {
-  //Auth functions go here
-}
+const secret = 'mysecretssshhhhhhh';
+const expiration = '2h';
 
-export default new AuthService();
+module.exports = {
+  signToken: function ({ email, favoriteTeam, _id }) {
+    const payload = { email, favoriteTeam, _id };
+    return jwt.sign({ data: payload }, secret, { expiresIn: expiration });
+  },
+};
