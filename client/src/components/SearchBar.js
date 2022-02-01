@@ -7,8 +7,8 @@ import {
 function SearchBar () {
 return(
 
-<InputGroup className="SearchBar" size="lg">
- <InputGroup.Text id="inputGroup-sizing-lg">Search</InputGroup.Text>
+<InputGroup size="lg">
+ <InputGroup.Text id="inputGroup-sizing-lg">Large</InputGroup.Text>
  <FormControl aria-label="Large" aria-describedby="inputGroup-sizing-sm" />
 </InputGroup>
    
