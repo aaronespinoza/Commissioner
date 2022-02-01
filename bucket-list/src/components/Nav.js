@@ -11,8 +11,8 @@ return(
     <Navbar bg="dark" variant="dark">
   <Container>
   <Nav className="me-auto">
-    <Button variant="dark" onClick={props.handleShow}>Login</Button>
-    <Nav.Link href="#features">Sign Up</Nav.Link>
+    <Button variant="dark" onClick={props.handleShowLogin}>Login</Button>
+    <Nav.Link href="#features"onClick={props.handleShow}>Sign Up</Nav.Link>
   </Nav>
   </Container>
 </Navbar>

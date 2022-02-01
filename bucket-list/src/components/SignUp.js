@@ -2,14 +2,14 @@ import React from 'react'
 import {
   Modal,
   Button} from "react-bootstrap" 
-function Login ({
-    showLogin,handleCloseLogin
+function SignUp ({
+    show,handleClose
 }){
     return (
-        <Modal show={showLogin} onHide={handleCloseLogin}>
+        <Modal show={show} onHide={handleClose}>
         <Modal.Dialog>
         <Modal.Header closeButton>
-          <Modal.Title>User Login</Modal.Title>
+          <Modal.Title>User SignUp</Modal.Title>
         </Modal.Header>
       
         <Modal.Body>
@@ -17,10 +17,12 @@ function Login ({
           <input></input>
           <p>Password</p>
           <input></input>
+          <p>Favorite Team</p>
+          <input></input>
         </Modal.Body>
       
         <Modal.Footer>
-          <Button variant="secondary" onClick={handleCloseLogin}>Close</Button>
+          <Button variant="secondary" onClick={handleClose}>Close</Button>
           <Button variant="primary">Save changes</Button>
         </Modal.Footer>
       </Modal.Dialog>
@@ -28,4 +30,4 @@ function Login ({
     )
 }
 
-export default Login;
+export default SignUp;

@@ -2,28 +2,37 @@ import './App.css';
 import React,{useState} from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Login from './components/Login'
+import SignUp from './components/SignUp'
 import Nav from './components/Nav'
 
 
 function App() {
   const [show, setShow] = useState(false);
+  const [showLogin, setShowLogin] = useState(false);
 
   const handleClose = () => setShow(false);
+  const handleCloseLogin = () => setShowLogin(false);
   const handleShow = () => setShow(true);
+  const handleShowLogin = () => setShowLogin(true);
   return (
   <>
 
 <div className="mainBg">
 
+  <div className="SearchBg">
 
- <Nav handleShow={handleShow}></Nav>
 
-     <Login show={show} handleClose={handleClose}></Login>
+ <Nav handleShow={handleShow} handleShowLogin={handleShowLogin}></Nav>
+
+     <Login showLogin={showLogin} handleCloseLogin={handleCloseLogin}></Login>
+     <SignUp show={show} handleClose={handleClose}></SignUp>
  
+    </div>
+
     </div>
 </>
   );
-  
+
 }
 
 
