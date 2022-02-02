@@ -5,7 +5,12 @@ import { useMutation } from '@apollo/client';
 import { LOGIN } from '../utils/mutations';
 
 
+import Auth from '../utils/auth';
+// test functionality of login.js and app.js
+
+
 const LoginPage = (props) => {
+
   const [formState, setFormState] = useState({ email: '', password: '' });
   const [login, { error, data }] = useMutation(LOGIN);
 
