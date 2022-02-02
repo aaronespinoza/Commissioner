@@ -4,23 +4,14 @@ import {
     FormControl,
    } from "react-bootstrap" 
 
-function SearchBar (props) {
+function SearchBar () {
 return(
 
-
-<InputGroup size="lg">
- <InputGroup.Text id="inputGroup-sizing-lg">Large</InputGroup.Text>
+<InputGroup className="SearchBar" size="lg">
+ <InputGroup.Text id="inputGroup-sizing-lg">Search</InputGroup.Text>
  <FormControl aria-label="Large" aria-describedby="inputGroup-sizing-sm" />
-
-
-
- {/* onClick=( () => props.submit(form value will go here))  */}
-
-
 </InputGroup>
    
-
-
 
 )
 }
@@ -29,6 +20,4 @@ return(
 export default SearchBar; 
 
 
-
  
-

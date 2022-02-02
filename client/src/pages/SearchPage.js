@@ -1,17 +1,27 @@
 import React, { useState, useEffect } from "react";
 import "./SearchPage.css";
+<<<<<<< HEAD
 import img from "../images/searchCourt.jpg";
 import MyTeamCard from "../components/MyTeamCard";
 import WinsCard from "../components/WinsCard";
 import Percentage from "../components/Percentage";
 import Roster from "../components/Roster";
 import API from "../utils/nbaAPI"
+=======
+import img from "../../images/searchCourt.jpg";
+import MyTeamCard from "../../components/MyTeamCard";
+import WinsCard from "../../components/WinsCard";
+import Percentage from "../../components/Percentage";
+import Roster from "../../components/Roster";
+import SearchBar from "../../components/SearchBar";
+>>>>>>> 6945ac67ea172a712a1733ff765b3ab0c5d0b83e
 import {
     Row,
     Col,
    } from "react-bootstrap" 
    
 import SearchBar from "../components/SearchBar";
+
 
 function SearchPage() {
 
@@ -65,7 +75,13 @@ if (!team || !standings) return <div>Loading</div>
             <Percentage winPercentage={standings.winPercentage} winStreak={standings.winStreak}/>
           </Col>
           <Col sm={4}>
+<<<<<<< HEAD
             <SearchBar submit={setFormInput}/>
+=======
+
+              <SearchBar/>
+
+>>>>>>> 6945ac67ea172a712a1733ff765b3ab0c5d0b83e
             <Roster/>
           </Col>
         </Row>
