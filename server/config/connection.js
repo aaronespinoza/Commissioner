@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 mongoose.connect(
-  process.env.MONGODB_URI || 'mongodb://localhost/mern-template',
+  process.env.MONGODB_URI || 'mongodb://localhost/commissioner',
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,

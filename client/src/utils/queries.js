@@ -9,3 +9,15 @@ export const QUERY_EXAMPLES = gql`
     }
   }
 `;
+
+export const QUERY_ME = gql`
+query{
+  me{
+    _id
+    firstName
+    lastName
+    email
+    favoriteTeam
+  }
+}
+`
