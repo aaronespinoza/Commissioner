@@ -16,7 +16,6 @@ useEffect( () => {
         .then(res=>{
             console.log(res)
             setPlayers(res.data.api.players)
-
         })
 
         API.record(res.data.api.teams[0].teamId)
