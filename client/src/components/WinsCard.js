@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import API from "../utils/nbaAPI"
 import {
     Card,
     Container,
@@ -6,11 +7,33 @@ import {
    } from "react-bootstrap" 
 
 function WinsCard () {
+
+    const [team, setTeam] = useState();
+    const [standing, setStandings] = useState();
+
+useEffect( () => {
+    API.search("Lakers")
+    .then(res=>{
+        console.log(res)
+        setTeam(res.data.api.teams[0])
+
+        
+
+        API.record(res.data.api.teams[0].teamId)
+        .then(res=>{
+            console.log(res)
+            setStandings(res.data.api.standings[0])
+        })
+})
+}, [])
+
+
+    
 return(
     <Container>
         <Row lg={4}>
     <Card className="WinsCard">
-    <Card.Body >Team Wins | Team Losses</Card.Body>
+    <Card.Body >Team Wins {standing.win} | Team Losses {standing.loss} </Card.Body>
     </Card>
     </Row>
     </Container>
