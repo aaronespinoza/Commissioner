@@ -1,6 +1,6 @@
 import React from 'react';
-import "./UpdatePage.css";
-import img3 from "../images/UpdateUser.png";
+// import "./UpdatePage.css";
+import img3 from "../images/searchCourt.jpg";
 
 import {
   
@@ -24,4 +24,4 @@ function UpdatePage(){
 
 
 
-   export default UpatePage;
+   export default UpdatePage;

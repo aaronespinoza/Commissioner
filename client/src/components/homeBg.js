@@ -3,12 +3,12 @@ import homeImg from "../images/signIn.jpg";
 
 function HomeBg(){
     return(
-<div>
+<div
     style={{
         backgroundImage: `url(${homeImg})`,
-        backgroundSize: "cover"
+        backgroundSize: "cover",
         height: "100vh",
-    }}
+    }} >
 </div>
     )
 }
