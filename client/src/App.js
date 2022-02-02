@@ -8,7 +8,7 @@ import {
 import { setContext } from '@apollo/client/link/context';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
-import Home from './pages/Home';
+
 import Nba from './components/NBA'
 
 import './App.css';
@@ -18,6 +18,9 @@ import Login from './components/Login'
 import SignUp from './components/SignUp'
 import Nav from './components/Nav'
 import SearchPage from './pages/SearchPage';
+import LoginPage from './pages/Login'
+import UpdatePage from './pages/UpdatePage'
+import HomeBg from './components/homeBg';
 
 
 
@@ -60,14 +63,20 @@ function App() {
 
     <ApolloProvider client={client}>
       <Router>
-        <Nav/>
+        <Nav show={show} showLogin={showLogin} handleClose={handleClose} handleCloseLogin={handleCloseLogin} handleShow={handleShow} handleShowLogin={handleShowLogin}/>
          
             <Route exact path="/">
-              <Home />
+              <HomeBg/>
             </Route>
+
             <Route exact path="/NBA">
               
               <SearchPage/>
+            </Route>
+
+            <Route exact path="/update">
+              
+              <UpdatePage/>
             </Route>
          
       </Router>

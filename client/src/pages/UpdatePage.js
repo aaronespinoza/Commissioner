@@ -1,3 +1,4 @@
+
 import React from 'react';import React from "react";
 // import "./UpdatePage.css";
 // import img3 from "../images/UpdateUser.png";
@@ -6,6 +7,11 @@ import React from 'react';import React from "react";
 import { useMutation } from '@apollo/client';
 import { REMOVE_USER } from '../utils/mutations';
 import { UPDATE_TEAM } from '../utils/mutations';
+
+import React from 'react';
+// import "./UpdatePage.css";
+import img3 from "../images/UpdateUser.png";
+
 
 import {
   
@@ -51,4 +57,8 @@ const UpdatePage = () => {
 
 
 
+
 export default UpdatePage;
+
+  
+

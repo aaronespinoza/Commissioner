@@ -6,26 +6,9 @@ import {
     Row,
    } from "react-bootstrap" 
 
-function WinsCard () {
+function WinsCard (props) {
 
-    const [team, setTeam] = useState();
-    const [standing, setStandings] = useState();
-
-useEffect( () => {
-    API.search("Lakers")
-    .then(res=>{
-        console.log(res)
-        setTeam(res.data.api.teams[0])
-
-        
-
-        API.record(res.data.api.teams[0].teamId)
-        .then(res=>{
-            console.log(res)
-            setStandings(res.data.api.standings[0])
-        })
-})
-}, [])
+   
 
 
     
@@ -33,7 +16,7 @@ return(
     <Container>
         <Row lg={4}>
     <Card className="WinsCard">
-    <Card.Body >Team Wins {standing.win} | Team Losses {standing.loss} </Card.Body>
+    <Card.Body >Team Wins {props.wins} | Team Losses {props.losses} </Card.Body>
     </Card>
     </Row>
     </Container>
