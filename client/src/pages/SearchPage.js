@@ -6,6 +6,7 @@ import WinsCard from "../components/WinsCard";
 import Percentage from "../components/Percentage";
 import Roster from "../components/Roster";
 import API from "../utils/nbaAPI"
+import Auth from '../utils/auth'
 import {
     Row,
     Col,
@@ -23,7 +24,8 @@ function SearchPage() {
 
   useEffect(  () => {
       const fetchData = async () => {
-          const results = await API.search("Lakers")
+        console.log(Auth.getProfile()) 
+        const results = await API.search(Auth.getProfile().data.favoriteTeam)
           console.log(results)
           setTeam(results.data.api.teams[0])
         
