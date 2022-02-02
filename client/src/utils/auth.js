@@ -44,11 +44,7 @@ class AuthService {
     // this will reload the page and reset the state of the application
     window.location.assign('/');
   }
+
 }
 
-module.exports = {
-  signToken: function ({ email, favoriteTeam, _id }) {
-    const payload = { email, favoriteTeam, _id };
-    return jwt.sign({ data: payload }, secret, { expiresIn: expiration });
-  },
-};
+export default new AuthService()

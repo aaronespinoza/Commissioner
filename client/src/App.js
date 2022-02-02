@@ -64,7 +64,7 @@ function App() {
         <Nav/>
          
             <Route exact path="/">
-              <LoginPage/>
+              {/* <LoginPage/> */}
             </Route>
             <Route exact path="/NBA">
               
