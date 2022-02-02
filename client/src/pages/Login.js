@@ -8,6 +8,11 @@ import { LOGIN } from '../utils/mutations';
 import Auth from '../utils/auth';
 // test functionality of login.js and app.js
 
+import {
+Form, 
+Button
+} from 'react-bootstrap';
+
 
 const LoginPage = (props) => {
 
@@ -57,7 +62,7 @@ const LoginPage = (props) => {
                 {/* <Link to="/">back to the homepage.</Link> */}
               </p>
             ) : (
-              <form onSubmit={handleFormSubmit}>
+              <Form onSubmit={handleFormSubmit}>
                 <input
                   className="form-input"
                   placeholder="Your email"
@@ -74,14 +79,14 @@ const LoginPage = (props) => {
                   value={formState.password}
                   onChange={handleChange}
                 />
-                <button
+                <Button
                   className="btn btn-block btn-primary"
                   style={{ cursor: 'pointer' }}
                   type="submit"
                 >
                   Submit
-                </button>
-              </form>
+                </Button>
+              </Form>
             )}
 
             {error && (
