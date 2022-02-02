@@ -46,4 +46,9 @@ class AuthService {
   }
 }
 
-export default new AuthService();
+module.exports = {
+  signToken: function ({ email, favoriteTeam, _id }) {
+    const payload = { email, favoriteTeam, _id };
+    return jwt.sign({ data: payload }, secret, { expiresIn: expiration });
+  },
+};

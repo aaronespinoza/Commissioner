@@ -7,11 +7,14 @@ import {
 function SearchBar () {
 return(
 
+
 <InputGroup size="lg">
  <InputGroup.Text id="inputGroup-sizing-lg">Large</InputGroup.Text>
  <FormControl aria-label="Large" aria-describedby="inputGroup-sizing-sm" />
 </InputGroup>
    
+
+
 
 )
 }
@@ -20,4 +23,6 @@ return(
 export default SearchBar; 
 
 
+
  
+

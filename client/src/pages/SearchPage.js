@@ -10,6 +10,8 @@ import {
     Row,
     Col,
    } from "react-bootstrap" 
+   
+import SearchBar from "../components/SearchBar";
 
 
 function SearchPage() {
@@ -29,7 +31,9 @@ function SearchPage() {
             <Percentage />
           </Col>
           <Col sm={4}>
+
               <SearchBar/>
+
             <Roster/>
           </Col>
         </Row>
