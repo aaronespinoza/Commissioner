@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import {
   ApolloClient,
   InMemoryCache,
@@ -8,8 +8,19 @@ import {
 import { setContext } from '@apollo/client/link/context';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
-import Home from './pages/Home';
+
 import Nba from './components/NBA'
+
+import './App.css';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Login from './components/Login'
+import SignUp from './components/SignUp'
+import Nav from './components/Nav'
+import SearchPage from './pages/SearchPage';
+import LoginPage from './pages/Login'
+
+
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -36,19 +47,34 @@ const client = new ApolloClient({
 });
 
 function App() {
+  
+  const [show, setShow] = useState(false);
+  const [showLogin, setShowLogin] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleCloseLogin = () => setShowLogin(false);
+  const handleShow = () => setShow(true);
+  const handleShowLogin = () => setShowLogin(true);
+
   return (
+    
+
     <ApolloProvider client={client}>
       <Router>
-          <div className="container">
+        <Nav/>
+         
             <Route exact path="/">
-              <Home />
+              {/* <LoginPage/> */}
             </Route>
             <Route exact path="/NBA">
-              <Nba />
+              
+              <SearchPage/>
             </Route>
-          </div>
+         
       </Router>
     </ApolloProvider>
+
+    
   );
 }
 
