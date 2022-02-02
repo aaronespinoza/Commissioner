@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import {
   ApolloClient,
   InMemoryCache,
@@ -12,7 +12,7 @@ import Home from './pages/Home';
 import Nba from './components/NBA'
 
 import './App.css';
-import React,{useState} from 'react'
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Login from './components/Login'
 import SignUp from './components/SignUp'
@@ -60,15 +60,16 @@ function App() {
 
     <ApolloProvider client={client}>
       <Router>
-          <div className="container">
+        <Nav/>
+         
             <Route exact path="/">
               <Home />
             </Route>
             <Route exact path="/NBA">
-              <Nba />
+              
               <SearchPage/>
             </Route>
-          </div>
+         
       </Router>
     </ApolloProvider>
 

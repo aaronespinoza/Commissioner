@@ -1,14 +1,16 @@
 import React from "react";
 import "./SearchPage.css";
-import img from "../../images/searchCourt.jpg";
-import MyTeamCard from "../../components/MyTeamCard";
-import WinsCard from "../../components/WinsCard";
-import Percentage from "../../components/Percentage";
-import Roster from "../../components/Roster";
+import img from "../images/searchCourt.jpg";
+import MyTeamCard from "../components/MyTeamCard";
+import WinsCard from "../components/WinsCard";
+import Percentage from "../components/Percentage";
+import Roster from "../components/Roster";
 import {
     Row,
     Col,
    } from "react-bootstrap" 
+   
+import SearchBar from "../components/SearchBar";
 
 function SearchPage() {
   return (
@@ -27,6 +29,7 @@ function SearchPage() {
             <Percentage />
           </Col>
           <Col sm={4}>
+            <SearchBar/>
             <Roster/>
           </Col>
         </Row>
