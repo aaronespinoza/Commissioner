@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 // import { LOGIN_USER } from '../utils/mutations';
 
 import Auth from '../utils/auth';
-
+// test functionality of login.js and app.js
 const Login = (props) => {
   const [formState, setFormState] = useState({ email: '', password: '' });
   const [login, { error, data }] = useMutation(LOGIN_USER);
