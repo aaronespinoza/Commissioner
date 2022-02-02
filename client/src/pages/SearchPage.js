@@ -1,19 +1,11 @@
 import React from "react";
 import "./SearchPage.css";
-<<<<<<< HEAD:bucket-list/src/Pages/SearchPage/SearchPage.js
 import img from "../../images/searchCourt.jpg";
 import MyTeamCard from "../../components/MyTeamCard";
 import WinsCard from "../../components/WinsCard";
 import Percentage from "../../components/Percentage";
 import Roster from "../../components/Roster";
 import SearchBar from "../../components/SearchBar";
-=======
-import img from "../images/searchCourt.jpg";
-import MyTeamCard from "../components/MyTeamCard";
-import WinsCard from "../components/WinsCard";
-import Percentage from "../components/Percentage";
-import Roster from "../components/Roster";
->>>>>>> b0fb61efd58be11fbf1fd8d0403ef158d8697a9c:client/src/pages/SearchPage.js
 import {
     Row,
     Col,
