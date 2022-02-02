@@ -19,6 +19,8 @@ import SignUp from './components/SignUp'
 import Nav from './components/Nav'
 import SearchPage from './pages/SearchPage';
 import LoginPage from './pages/Login'
+import UpdatePage from './pages/UpdatePage'
+import HomeBg from './components/homeBg';
 
 
 
@@ -61,14 +63,20 @@ function App() {
 
     <ApolloProvider client={client}>
       <Router>
-        <Nav/>
+        <Nav show={show} showLogin={showLogin} handleClose={handleClose} handleCloseLogin={handleCloseLogin} handleShow={handleShow} handleShowLogin={handleShowLogin}/>
          
             <Route exact path="/">
-              {/* <LoginPage/> */}
+              <HomeBg/>
             </Route>
+
             <Route exact path="/NBA">
               
               <SearchPage/>
+            </Route>
+
+            <Route exact path="/update">
+              
+              <UpdatePage/>
             </Route>
          
       </Router>
