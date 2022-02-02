@@ -1,6 +1,6 @@
 import React from 'react';import React from "react";
-import "./UpdatePage.css";
-import img3 from "../images/UpdateUser.png";
+// import "./UpdatePage.css";
+// import img3 from "../images/UpdateUser.png";
 //we import the mutations from the 
 //utils on the client end
 import { useMutation } from '@apollo/client';
@@ -9,7 +9,7 @@ import { UPDATE_TEAM } from '../utils/mutations';
 
 import {
   
-   } from "react-bootstrap" 
+   } from "react-bootstrap";
 
 const UpdatePage = () => {
   const [deleteUser, { error }] = useMutation(REMOVE_USER);
