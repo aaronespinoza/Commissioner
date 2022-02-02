@@ -1,6 +1,6 @@
 import React from 'react';
 // import "./UpdatePage.css";
-import img3 from "../images/searchCourt.jpg";
+import img3 from "../images/UpdateUser.png";
 
 import {
   
