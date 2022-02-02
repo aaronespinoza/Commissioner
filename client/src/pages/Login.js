@@ -91,4 +91,4 @@ const LoginPage = (props) => {
   );
 };
 
-export default LoginPage;
+export default {LoginPage, Auth};
