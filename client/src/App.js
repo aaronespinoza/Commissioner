@@ -8,7 +8,7 @@ import {
 import { setContext } from '@apollo/client/link/context';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
-import Home from './pages/Home';
+
 import Nba from './components/NBA'
 
 import './App.css';
@@ -18,6 +18,7 @@ import Login from './components/Login'
 import SignUp from './components/SignUp'
 import Nav from './components/Nav'
 import SearchPage from './pages/SearchPage';
+import LoginPage from './pages/Login'
 
 
 
@@ -63,7 +64,7 @@ function App() {
         <Nav/>
          
             <Route exact path="/">
-              <Home />
+              <LoginPage/>
             </Route>
             <Route exact path="/NBA">
               

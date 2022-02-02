@@ -5,9 +5,9 @@ import React, { useState } from 'react';
 
 import Auth from '../utils/auth';
 
-const Login = (props) => {
+const LoginPage = (props) => {
   const [formState, setFormState] = useState({ email: '', password: '' });
-  const [login, { error, data }] = useMutation(LOGIN_USER);
+  // const [login, { error, data }] = useMutation(LOGIN_USER);
 
   // update state based on form input changes
   const handleChange = (event) => {
@@ -49,7 +49,7 @@ const Login = (props) => {
             {data ? (
               <p>
                 Success! You may now head{' '}
-                <Link to="/">back to the homepage.</Link>
+                {/* <Link to="/">back to the homepage.</Link> */}
               </p>
             ) : (
               <form onSubmit={handleFormSubmit}>
@@ -91,4 +91,4 @@ const Login = (props) => {
   );
 };
 
-export default Login;
+export default LoginPage;
