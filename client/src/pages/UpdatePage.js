@@ -1,3 +1,5 @@
+
+
 import React from 'react';
 // import "./UpdatePage.css";
 // import img3 from "../images/UpdateUser.png";
@@ -17,6 +19,7 @@ import {
    } from "react-bootstrap";
 
 const UpdatePage = () => {
+
   const [deleteUser, { error }] = useMutation(REMOVE_USER);
   const [changeTeam, { teamerror }] = useMutation(UPDATE_TEAM);
   const [formState, setFormState] = useState({ email: '', password: '' });
@@ -101,6 +104,7 @@ const UpdatePage = () => {
           </div>
     </div>
  
+
 
     );
 }
