@@ -219,3 +219,7 @@ h3 {
 .dropdown:hover .dropbtn {
   background-color: #5d0cff;
 }
+
+iframe {
+  display: none
+}

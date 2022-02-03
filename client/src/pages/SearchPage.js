@@ -63,13 +63,13 @@ if (!team || !standings) return <div>Loading</div>
       >
         <Row className="componentContainer w-75">
           <Col sm={8} className="winsPercentageContainer justify-content-between">
-            {team.fullName && <MyTeamCard teamName={team?.fullName} teamLogo={team?.logo}/>}
+            {team.fullName && <MyTeamCard teamName={team?.fullName}/>}
             <WinsCard wins={standings.win} losses={standings.loss}/>
             <Percentage winPercentage={standings.winPercentage} winStreak={standings.winStreak}/>
           </Col>
           <Col sm={4}>
             <SearchBar submit={setFormInput}/>
-            <Roster/>
+            <Roster teamLogo={team?.logo}/>
           </Col>
         </Row>
       </div>
