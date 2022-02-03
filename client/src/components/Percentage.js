@@ -15,7 +15,8 @@ return(
     <Container>
         <Row lg={4}>
     <Card className="Percentage">
-    <Card.Body >Win %: {props.winPercentage}  | Win Streak: {props.winStreak}</Card.Body>
+    <Card.Body >Win %: {props.winPercentage}</Card.Body>
+    <Card.Body >Win Streak: {props.winStreak}</Card.Body>
     </Card>
     </Row>
     </Container>

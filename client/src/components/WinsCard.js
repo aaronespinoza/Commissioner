@@ -16,7 +16,8 @@ return(
     <Container>
         <Row lg={4}>
     <Card className="WinsCard">
-    <Card.Body >Team Wins {props.wins} | Team Losses {props.losses} </Card.Body>
+    <Card.Body >Team Wins {props.wins} </Card.Body>
+    <Card.Body >Team Losses {props.losses} </Card.Body>
     </Card>
     </Row>
     </Container>

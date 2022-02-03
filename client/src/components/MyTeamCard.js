@@ -15,7 +15,7 @@ return(
     <Container>
         <Row lg={4}>
     <Card className="myTeam">
-    <Card.Body >{props.teamName} <img src={props.teamLogo} alt='team logo'/></Card.Body>
+    <Card.Body >{props.teamName}</Card.Body>
     </Card>
     </Row>
     </Container>

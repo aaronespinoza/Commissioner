@@ -12,7 +12,7 @@
 .WinsCard {
   width: 70%;
   opacity: 75%;
-  height: 200px;
+  height: 250px;
   margin-left: 2px;
   box-shadow: 5px 10px 10px rgb(148, 146, 146);
   text-align: center;
@@ -23,7 +23,7 @@
 .Percentage {
   width: 70%;
   opacity: 75%;
-  height: 200px;
+  height: 250px;
   margin-left: 2px;
   box-shadow: 5px 10px 10px rgb(148, 146, 146);
   text-align: center;
@@ -42,3 +42,7 @@
 
 }
 
+#logo{
+max-width: 75%;
+margin-top: 15%;
+}
