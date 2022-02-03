@@ -118,10 +118,7 @@ function SignUp ({show,handleClose})
             )}
         </Modal.Body>
       
-        {/* <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>Close</Button>
-          <Button variant="primary">Save changes</Button>
-        </Modal.Footer> */}
+
       </Modal.Dialog>
       </Modal>
     )

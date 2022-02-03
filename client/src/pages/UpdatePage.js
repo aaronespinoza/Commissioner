@@ -8,7 +8,11 @@ import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
 import { REMOVE_USER } from '../utils/mutations';
 import { UPDATE_TEAM } from '../utils/mutations';
+
 import Auth from '../utils/auth';
+
+
+
 
 
 // import "./UpdatePage.css";
@@ -121,8 +125,12 @@ const UpdatePage = (props) => {
 
 
     );
+
+}}
+
   
 };
+
 
 
 
