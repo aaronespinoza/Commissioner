@@ -134,8 +134,6 @@ const UpdatePage = (props) => {
 
     );
 
-}}
-
   
 };
 
