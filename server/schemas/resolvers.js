@@ -44,14 +44,18 @@ const resolvers = {
       }
       throw new AuthenticationError('You need to be logged in!');
     },
-    updateTeam: async (parent, {favoriteTeam, _id}) => {
+    updateTeam: async (parent, {favoriteTeam, id},context) => {
+      console.log("you made it")
       if(context.user) {
         //first curly is what i'm looking for
         //second curly is what I want to change
-        return await User.findOneAndUpdate({_id: _id},
+        const user= await User.findOneAndUpdate({_id: id},
           {favoriteTeam: favoriteTeam},
           {new:true})
+          const token = signToken(user);
+          return {token, user};
       }
+      
     },
 
   },
