@@ -94,10 +94,10 @@ function Login ({showLogin,handleCloseLogin})
             )}
         </Modal.Body>
       
-        <Modal.Footer>
+        {/* <Modal.Footer>
           <Button variant="secondary" onClick={handleCloseLogin}>Close</Button>
           <Button variant="primary">Save changes</Button>
-        </Modal.Footer>
+        </Modal.Footer> */}
       </Modal.Dialog>
       </Modal>
     )
