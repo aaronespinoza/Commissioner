@@ -1,5 +1,5 @@
 
-import React from 'react';import React from "react";
+import React from 'react';
 // import "./UpdatePage.css";
 // import img3 from "../images/UpdateUser.png";
 //we import the mutations from the 
@@ -7,8 +7,8 @@ import React from 'react';import React from "react";
 import { useMutation } from '@apollo/client';
 import { REMOVE_USER } from '../utils/mutations';
 import { UPDATE_TEAM } from '../utils/mutations';
+import Auth from '../utils/auth'
 
-import React from 'react';
 // import "./UpdatePage.css";
 import img3 from "../images/UpdateUser.png";
 
@@ -19,7 +19,7 @@ import {
 
 const UpdatePage = () => {
   const [deleteUser, { error }] = useMutation(REMOVE_USER);
-  const [changeTeam, { error }] = useMutation(UPDATE_TEAM);
+  const [changeTeam, { changeTeamerror }] = useMutation(UPDATE_TEAM);
 
   const handleChangeTeam = async (favoriteTeam) => {
   const token = Auth.loggedIn() ? Auth.getToken() : null;
@@ -28,15 +28,15 @@ const UpdatePage = () => {
       return false;
     }
 
-    try {
-      const { data } = await changeTeam({
-        variables: { bookData: { ...bookToSave } },
-      });
-      console.log(savedBookIds);
-      setSavedBookIds([...savedBookIds, bookToSave.bookId]);
-    } catch (err) {
-      console.error(err);
-    }
+    // try {
+    //   const { data } = await changeTeam({
+    //     variables: { bookData: { ...bookToSave } },
+    //   });
+    //   console.log(savedBookIds);
+    //   setSavedBookIds([...savedBookIds, bookToSave.bookId]);
+    // } catch (err) {
+    //   console.error(err);
+    // }
   
   };
     return(
