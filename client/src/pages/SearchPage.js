@@ -60,6 +60,8 @@ if (!team || !standings) return <div>Loading</div>
           backgroundSize: "cover",
           height: "100vh",
         }}
+
+        
       >
         <Row className="componentContainer w-75">
           <Col sm={8} className="winsPercentageContainer justify-content-between">
