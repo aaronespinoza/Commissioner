@@ -19,7 +19,7 @@ import SignUp from './components/SignUp'
 import Nav from './components/Nav'
 import SearchPage from './pages/SearchPage';
 import LoginPage from './pages/Login'
-import UpdatePage from './pages/UpdatePage'
+// import UpdatePage from './pages/UpdatePage'
 import HomeBg from './components/homeBg';
 
 
@@ -76,7 +76,7 @@ function App() {
 
             <Route exact path="/update">
               
-              <UpdatePage/>
+              {/* <UpdatePage/> */}
             </Route>
          
       </Router>

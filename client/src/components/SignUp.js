@@ -1,57 +1,50 @@
-import React, { useState } from 'react'
-import {
-  Modal,
-  Button} from "react-bootstrap";
-import {useMutation} from "@apollo/client";
+import React, {useState} from 'react'
+import { useMutation } from '@apollo/client';
 import { ADD_USER } from '../utils/mutations';
-
 import Auth from '../utils/auth';
 
+import {
+  Modal,
+  Button,
+  Form
+} from "react-bootstrap" 
+function SignUp ({show,handleClose})
 
-
-function SignUp ({
-    show,handleClose
-})
 {
 
-  const [userFormData, setUserFormData] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    password: '',
-    favoriteTeam: ''
-  }) // state of the form on page load
-  
-  const [addUser, {error}] = useMutation(ADD_USER);
-  
-  const handleInputChange= (event) => {
-    const {name, value} = event.target;
-    setUserFormData({...userFormData, [name]: value});
-  }
-  
-  const handleFormSubmit = async(event) => {
-    event.preventDefault();
-  
-    const form = event.currentTarget;
-    try {
-      const {data } = await addUser({
-        variables: {...userFormData},
-      });
-      console.log(data);
-      Auth.login(data.addUser.token);
-    } catch(err) {
-      console.error(err)
-    }
-  
-    setUserFormData({
-      firstName: '',
-      lastName: '',
-      email: '',
-      password: '',
-      favoriteTeam: ''
-    })
-  }
+  const [formState, setFormState] = useState({ firstName: '', lastName: '', email: '', favoriteTeam: '', password: '' });
+  const [addUser, { error, data }] = useMutation(ADD_USER);
 
+  // update state based on form input changes
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+
+    setFormState({
+      ...formState,
+      [name]: value,
+      
+    });
+  };
+
+  // submit form
+  const handleFormSubmit = async (event) => {
+    event.preventDefault();
+    console.log(formState);
+    try {
+      const { data } = await addUser({
+        variables: { ...formState },
+      });
+
+    //   Auth.login(data.login.token);
+    } catch (e) {
+      console.error(e);
+    }
+
+    // clear form values
+    setFormState({
+      firstName: '', lastName: '', email: '', favoriteTeam: '', password: '' 
+    });
+  };
     return (
         <Modal show={show} onHide={handleClose}>
         <Modal.Dialog>
@@ -60,16 +53,69 @@ function SignUp ({
         </Modal.Header>
       
         <Modal.Body>
-          <p>First Name</p>
-          <input name="firstName" type="text" onChange={handleInputChange} value={userFormData.firstName}></input>
-          <p>Last Name</p>
-          <input name='lastName' type="text" onChange={handleInputChange} value={userFormData.lastName}></input>
-          <p>Email</p>
-          <input name="email" type="text"  onChange={handleInputChange} value={userFormData.email}></input>
-          <p>Password</p>
-          <input name="password" type="password" onChange={handleInputChange} value={userFormData.password}></input>
-          <p>Favorite Team</p>
-          <input name="favoriteTeam" type="text"  onChange={handleInputChange} value={userFormData.favoriteTeam}></input>
+        {data ? (
+              <p>
+                Success! You may now head{' '}
+                {/* <Link to="/">back to the homepage.</Link> */}
+              </p>
+            ) : (
+              <Form onSubmit={handleFormSubmit}>
+                 <input
+                  className="form-input"
+                  placeholder="firstname"
+                  name="firstName"
+                  type="text"
+                  value={formState.firstName}
+                  onChange={handleChange}
+                />
+                 <input
+                  className="form-input"
+                  placeholder="lastname"
+                  name="lastName"
+                  type="text"
+                  value={formState.lastName}
+                  onChange={handleChange}
+                />
+                <input
+                  className="form-input"
+                  placeholder="Your email"
+                  name="email"
+                  type="email"
+                  value={formState.email}
+                  onChange={handleChange}
+                />
+               
+                 <input
+                  className="form-input"
+                  placeholder="favoriteteam"
+                  name="favoriteTeam"
+                  type="text"
+                  value={formState.favoriteTeam}
+                  onChange={handleChange}
+                />
+                 <input
+                  className="form-input"
+                  placeholder="******"
+                  name="password"
+                  type="password"
+                  value={formState.password}
+                  onChange={handleChange}
+                />
+                <Button
+                  className="btn btn-block btn-primary"
+                  style={{ cursor: 'pointer' }}
+                  type="submit"
+                >
+                  Submit
+                </Button>
+              </Form>
+            )}
+
+            {error && (
+              <div className="my-3 p-3 bg-danger text-white">
+                {error.message}
+              </div>
+            )}
         </Modal.Body>
       
         <Modal.Footer>

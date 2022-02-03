@@ -24,7 +24,8 @@ const resolvers = {
       return { token, user };
     },
     login: async(parent, {email, password}) => {
-      const user = User.findOne({ email });
+      const user = await User.findOne({ email });
+      console.log(user)
       if(!user) {
         throw new AuthenticationError('Incorrect Credentials');
       }
@@ -39,7 +40,7 @@ const resolvers = {
     },
     removeUser: async (parent, { userId }, context) => {
       if (context.user) {
-        return User.findOneAndDelete({ _id: userId });
+        return await User.findOneAndDelete({ _id: userId });
       }
       throw new AuthenticationError('You need to be logged in!');
     },

@@ -18,40 +18,9 @@ import {
    } from "react-bootstrap";
 
 const UpdatePage = () => {
-  const [deleteUser, { error }] = useMutation(REMOVE_USER);
-  const [changeTeam, { changeTeamerror }] = useMutation(UPDATE_TEAM);
-
-  const handleChangeTeam = async (favoriteTeam) => {
-  const token = Auth.loggedIn() ? Auth.getToken() : null;
-
-    if (!token) {
-      return false;
-    }
-
-    // try {
-    //   const { data } = await changeTeam({
-    //     variables: { bookData: { ...bookToSave } },
-    //   });
-    //   console.log(savedBookIds);
-    //   setSavedBookIds([...savedBookIds, bookToSave.bookId]);
-    // } catch (err) {
-    //   console.error(err);
-    // }
   
-  };
-    return(
-
-    <div className="pt-5 justify-content-center align-items-center d-flex w-100"
-        style={{
-          backgroundImage: `url(${img3})`,
-          backgroundSize: "cover",
-          height: "100vh",
-        }}
-        >
-        
-    </div>
- 
-
+ return (
+<div>updating</div>
     );
 }
 
