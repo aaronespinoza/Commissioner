@@ -6,11 +6,11 @@ import {
 
    } from "react-bootstrap" 
 
-function Roster () {
+function Roster (props) {
 return(
 
     <Card className="Roster">
-    <Card.Body >Team Roster</Card.Body>
+    <Card.Body>Team Logo<img id="logo" src={props.teamLogo} alt='team logo'/></Card.Body>
     </Card>
   
    
