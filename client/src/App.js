@@ -20,7 +20,7 @@ import Nav from './components/Nav'
 import SearchPage from './pages/SearchPage';
 import LoginPage from './pages/Login'
 import UpdatePage from './pages/UpdatePage'
-import HomeBg from './components/homeBg';
+import HomeBg from './components/HomeBg';
 
 
 
