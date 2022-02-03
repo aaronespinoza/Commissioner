@@ -33,10 +33,12 @@ export const REMOVE_USER = gql`
 `;
 
 export const UPDATE_TEAM = gql`
-  mutation updateTeam($userId: ID!,$favoriteTeam: String! ) {
-    updateTeam(userId: $userID, favoriteTeam: $favoriteTeam) {
+  mutation updateTeam($id: ID!,$favoriteTeam: String! ) {
+    updateTeam(id: $id, favoriteTeam: $favoriteTeam) {
+      token
+      user{
       _id
-      favoriteTeam
+      favoriteTeam}
     }
   }
 `;

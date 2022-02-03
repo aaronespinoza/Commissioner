@@ -27,7 +27,7 @@ import {
 const UpdatePage = (props) => {
 
   const [deleteUser, { error }] = useMutation(REMOVE_USER);
-  const [changeTeam, { teamerror }] = useMutation(UPDATE_TEAM);
+  const [updateTeam, { teamerror }] = useMutation(UPDATE_TEAM);
   const [formState, setFormState] = useState({ favoriteTeam: '' });
 
   // const handleChangeTeam = async (favoriteTeam) => {
@@ -62,12 +62,18 @@ const UpdatePage = (props) => {
     const handleFormSubmit = async (event) => {
       event.preventDefault();
       console.log(formState);
+      const user = Auth.getProfile()
+      console.log(user)
       try {
-        const { data } = await changeTeam({
-          variables: { ...formState },
+        const { data } = await updateTeam({
+          variables: {
+            
+            ...formState,
+          id: user.data._id
+          },
         });
 
-        //   Auth.login(data.login.token);
+           Auth.login(data.updateTeam.token);
       } catch (e) {
         console.error(e);
       }
@@ -77,6 +83,7 @@ const UpdatePage = (props) => {
         favoriteTeam: '',
       });
     };
+    console.log(formState);
     return (
       <div className="pt-5 justify-content-center align-items-center d-flex w-100"
         style={{
@@ -89,11 +96,12 @@ const UpdatePage = (props) => {
         <div className="card-body">
 
           <Form onSubmit={handleFormSubmit}>
-            <TeamSelect/>
+            <TeamSelect setState={setFormState} state= {formState}/>
+            
             <Button
               className="btn btn-block btn-primary"
               style={{ cursor: 'pointer' }}
-
+              type="submit"
             >
               Submit
             </Button>
@@ -105,7 +113,7 @@ const UpdatePage = (props) => {
               style={{ cursor: 'pointer' }}
             
             >
-              Delete
+              Delete Profile
             </Button>
 
 

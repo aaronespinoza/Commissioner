@@ -5,15 +5,22 @@ import {
    } from "react-bootstrap" 
 
 function TeamSelect (props) {
+
+    function handleChange (event) {
+        props.setState({
+            ...props.state,
+            favoriteTeam:event.target.value
+        })
+    }
 return(
 
 
 <InputGroup size="lg">
  <InputGroup.Text id="inputGroup-sizing-lg">Change Team</InputGroup.Text>
- <FormSelect  aria-label="Default select example">
+ <FormSelect  aria-label="Default select example" onChange={handleChange}>
   <option>Open this select menu to view teams</option>
-  <option value="1">Hawks</option>
-  <option value="2">Celtics</option>
+  <option value="Hawks">Hawks</option>
+  <option value="Celtics">Celtics</option>
   <option value="3">Nets</option>
   <option value="1">Hornets</option>
   <option value="2">Bulls</option>
