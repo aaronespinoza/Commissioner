@@ -30,8 +30,6 @@ function SearchPage() {
           setTeam(results.data.api.teams[0])
         
   
-          
-     
       }
       fetchData()    
   }, [])
