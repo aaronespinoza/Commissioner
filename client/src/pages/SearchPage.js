@@ -7,12 +7,13 @@ import Percentage from "../components/Percentage";
 import Roster from "../components/Roster";
 import API from "../utils/nbaAPI"
 import Auth from '../utils/auth'
+import SearchBar from "../components/SearchBar";
 import {
     Row,
     Col,
    } from "react-bootstrap" 
    
-import SearchBar from "../components/SearchBar";
+
 
 
 function SearchPage() {
