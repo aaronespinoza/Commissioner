@@ -9,7 +9,7 @@ import { setContext } from '@apollo/client/link/context';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 
-import Nba from './components/NBA'
+
 
 import './App.css';
 
