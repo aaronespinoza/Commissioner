@@ -1,6 +1,6 @@
 .myTeam {
   width: 70%;
-  /* opacity: 75%; */
+  opacity: 75%;
   height: 200px;
   margin-left: 2px;
   box-shadow: 5px 10px 10px rgb(148, 146, 146);
@@ -11,7 +11,7 @@
 
 .WinsCard {
   width: 70%;
-  /* opacity: 75%; */
+  opacity: 75%;
   height: 250px;
   margin-left: 2px;
   box-shadow: 5px 10px 10px rgb(148, 146, 146);
@@ -22,7 +22,7 @@
 
 .Percentage {
   width: 70%;
-  /* opacity: 75%; */
+  opacity: 75%;
   height: 250px;
   margin-left: 2px;
   box-shadow: 5px 10px 10px rgb(148, 146, 146);
@@ -32,7 +32,7 @@
 }
 
 .Roster {
-  /* opacity: 75%; */
+  opacity: 75%;
   height: 600px;
   box-shadow: 5px 10px 10px rgb(148, 146, 146);
   text-align: center;
